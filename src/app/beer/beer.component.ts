@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Beer } from './../model/beer.model'
+import { Component, Input } from '@angular/core';
+import { Beer } from './../model/beer.model';
 
 @Component({
   selector: 'app-beer',
@@ -8,11 +8,7 @@ import { Beer } from './../model/beer.model'
 })
 export class BeerComponent {
 
-  masterBeerList: Beer [] = [
-    new Beer('Beer1', 'Beer1 Imports', 5, 6.7),
-    new Beer('HarryPot Beer', 'Broomstick Brewing', 5, 7.8),
-    new Beer('Kalamazoom', 'Brew Right', 4, 5.4)
-  ];
+  @Input() childBeerList: Beer[];
 
   sellPint(beer){
     beer.volume = beer.volume - 1;

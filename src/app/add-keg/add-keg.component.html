@@ -1,0 +1,10 @@
+<p>
+  add-keg works!
+</p>
+<form>
+  <input type="text" placeholder="Beer Name" #newName>
+  <input type="text" placeholder="Beer Brand" #newBrand>
+  <input type="number" placeholder="Price" #newPrice>
+  <input type="number" placeholder="Alcohol Content" #newAlcoholContent>
+  <button type="submit" (click) = "addKeg(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value)">Submit</button>
+</form>

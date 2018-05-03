@@ -7,5 +7,6 @@
   <img width="300" alt="Angular Logo" src="https://www.geek.com/wp-content/uploads/2017/09/ghibli-e1504723025593-619x352.jpg">
 
 
-  <app-beer></app-beer>
+  <app-beer [childBeerList] = "masterBeerList"></app-beer>
+  <app-add-keg (acceptBeer)="addNewKeg($event)"></app-add-keg>
 </div>
