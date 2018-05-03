@@ -2,10 +2,17 @@
   beer works!
 </p>
 
-<ul *ngFor="let beer of childBeerList"><strong>{{beer.name}}</strong>
+<ul *ngFor="let beer of childBeerList"><strong>{{beer.name}}</strong><button (click)="showEditKeg(beer)">Edit beer</button>
+  <form *ngIf="beer.show">
+    <input type="text" value={{beer.name}} #newName>
+    <input type="text" value={{beer.brand}} #newBrand>
+    <input type="number" value={{beer.price}} #newPrice>
+    <input type="number" value={{beer.alcoholContent}} #newAlcoholContent>
+    <button type="submit" (click) = "editKeg(beer, newName.value, newBrand.value, newPrice.value, newAlcoholContent.value)">Submit</button>
+  </form>
+
   <li>Brand: {{beer.brand}}</li>
   <li>Price: ${{beer.price}}</li>
   <li>Alcohol Content: {{beer.alcoholContent}}%</li>
   <li>Remaining pints: {{beer.volume}}<button (click)="sellPint(beer); lowPintWarning(beer)">Sell pint</button></li>
-
 </ul>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BeerComponent } from './beer/beer.component';
 import { Beer } from './model/beer.model';
 import { AddKegComponent } from './add-keg/add-keg.component';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
 
 @Component({
   selector: 'app-root',

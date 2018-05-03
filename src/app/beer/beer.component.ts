@@ -23,4 +23,16 @@ export class BeerComponent {
       console.log("I love beer")
     }
   }
+
+  showEditKeg(beer) {
+    beer.show = true;
+  }
+
+  editKeg(beer, name, brand, price, alcoholContent) {
+    beer.name = name;
+    beer.brand = brand;
+    beer.price = price;
+    beer.alcoholContent = alcoholContent;
+    beer.show = false;
+  }
 }
