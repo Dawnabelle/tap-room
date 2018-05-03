@@ -1,0 +1,11 @@
+<p>
+  beer works!
+</p>
+
+<ul *ngFor="let beer of masterBeerList"><strong>{{beer.name}}</strong>
+  <li>Brand: {{beer.brand}}</li>
+  <li>Price: ${{beer.price}}</li>
+  <li>Alcohol Content: {{beer.alcoholContent}}%</li>
+  <li>Remaining pints: {{beer.volume}}<button (click)="sellPint(beer); lowPintWarning(beer)">Sell pint</button></li>
+
+</ul>
